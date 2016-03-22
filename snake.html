@@ -1,0 +1,89 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>JS贪吃蛇</title>
+
+    <style>
+        //下面style来自snake2
+
+        body {
+              overflow: hidden;
+          }
+
+        .meta {
+            margin: 20px;
+            padding: 20px;
+            position: absolute;
+            top:20%;
+            right: 35%;
+            background: #bdc7ff;
+        }
+
+        .redglow {
+            color: white;
+            font-weight: bold;
+            -webkit-text-shadow: red 0 0 5px, red 0 0 5px, red 0 0 5px, red 0 0 5px, red 0 0 5px;
+            text-shadow: red 0 0 5px, red 0 0 5px, red 0 0 5px, red 0 0 5px, red 0 0 5px;
+        }
+
+        .greenglow {
+            color: white;
+            font-weight: bold;
+            -webkit-text-shadow: green 0 0 5px, green 0 0 5px, green 0 0 5px, green 0 0 5px, green 0 0 5px;
+            text-shadow: green 0 0 5px, green 0 0 5px, green 0 0 5px, green 0 0 5px, green 0 0 5px;
+        }
+
+        .blueglow {
+            color: white;
+            font-weight: bold;
+            -webkit-text-shadow: blue 0 0 5px, blue 0 0 5px, blue 0 0 5px, blue 0 0 5px, blue 0 0 5px;
+            text-shadow: blue 0 0 5px, blue 0 0 5px, blue 0 0 5px, blue 0 0 5px, blue 0 0 5px;
+        }
+
+        .blackglow {
+            color: white;
+            font-weight: bold;
+            -webkit-text-shadow: black 0 0 5px, black 0 0 5px, black 0 0 5px, black 0 0 5px, black 0 0 5px;
+            text-shadow: black 0 0 5px, black 0 0 5px, black 0 0 5px, black 0 0 5px, black 0 0 5px;
+        }
+
+        .result h3 {
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.5em;
+        }
+
+    </style>
+
+</head>
+<body>
+<h1>JS贪吃蛇</h1>
+
+
+</br></br></br>
+
+<canvas id="myCanvas" width="750" height="600" style="border:1px solid #c3c3c3;">
+    <script type="text/javascript" src="snake2.js"></script>
+</canvas>
+
+
+
+
+<section class="meta well" style="text-align: center">
+
+
+    <input type="button"  class="blackglow" value="开始" onclick="drawBg('myCanvas')" />
+
+    <p><span class="greenglow">绿方：</span> <span class="greenglow" id="player1">Player</span></p>
+    <p><span class="redglow">红方：</span> <span class="redglow" id="player2">DSAhfl</span></p>
+    <p><span class="blueglow">回合：</span> <span class="blueglow" id="turnCount">a</span></p>
+    <table id="tabControl" style="margin: auto">
+        <tr><td></td><td><button name="up" class="blackglow" onclick="move('myCanvas',0)"><font size="5">↑</font></button></td><td></td></tr>
+        <tr><td><button name="left" class="blackglow" onclick="move('myCanvas',1)"><font size="5">←</font></button></td><td></td><td><button name="right" class="blackglow" onclick="move('myCanvas',2)">
+            <font size="5">→</font></button></td></tr>
+        <tr><td></td><td><button name="move" class="blackglow" onclick="move('myCanvas',3)"><font size="5">↓</font></button></td><td></td></tr>
+    </table>
+</section>
+
+</body>
+</html>
